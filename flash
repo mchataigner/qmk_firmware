@@ -1,0 +1,4 @@
+#!/bin/bash
+
+make ergodox_ez-mat
+teensy-loader-cli -mmcu=atmega32u4 -w -n ergodox_ez_mat.hex
