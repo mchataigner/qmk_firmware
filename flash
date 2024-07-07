@@ -1,4 +1,7 @@
 #!/bin/bash
 
-make ergodox_ez-mat
-teensy-loader-cli -mmcu=atmega32u4 -w -n ergodox_ez_mat.hex
+qmk config user.keymap=mat
+qmk config user.keyboard=ergodox_ez/base
+qmk compile
+
+teensy_loader_cli -mmcu=atmega32u4 -w -n ergodox_ez_base_mat.hex
